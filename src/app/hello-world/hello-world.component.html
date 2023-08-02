@@ -1,0 +1,173 @@
+<!--**  one way binding  **-->
+<!-- <h1>{{firstName}} {{lastName}}</h1> -->
+<!-- <h1 [innerText]=" title"></h1> -->
+ 
+<!--  ** Tow Way Binding // ** data cant change value component to view and view to component *** -->
+<!-- <h1>{{ name }}</h1>
+<br>
+<input type="text" name="" id="" [(ngModel)] = "name"> -->
+
+<!--  ** string interplation ** -->
+<!-- <h1>{{'hello '+' world '+' to Angular'}}</h1>   -->
+<!-- ** here ivaluvate the expression **  -->
+<!-- <h1>{{getTitle()}}</h1>  -->
+
+<!-- ** arithmetic operations **  -->
+<!-- <p>100 x 80 = {{ 100 * 80 }}</p>
+<p> Largest number : {{ getMax(100, 200) }}</p> -->
+
+<!-- **property interplation **  -->
+<!-- <p style.color = "{{color}}">This is red</p> -->
+
+<!-- **property Binding **  -->
+<!-- <h1 [innerText]="title"></h1>
+<button [disabled]="isDisabled">Click ME</button>  
+<button [attr.disabled]="isDisabled">Click ME</button>   -->
+ <!-- here we change the activitiy to the property  -->
+
+ <!-- **Event  Binding **  -->
+ <!-- <p>When the click count : {{ clickCount }}</p>
+<button (click)="clickMe()">Click Me</button>  -->
+<!-- here we have to mention the round bracket -->
+<!-- OR -->
+<!-- <button on-click="clickMe()">click Me1</button> -->
+
+ <!-- type Something: <input type="text" (input)="handleInput($event)"> -->
+ <!-- <p>{{ value }}</p>
+ type Something: <input type="text" (input)="handleInput($event); value1=$any($event.target).value">
+ <p> withOutInput :{{ value }}</p> -->
+
+ <!-- **Stucturl Directies for listed somthing ** -->
+ <!-- <h1>{{title}}</h1>
+ <ul>
+    <li *ngFor="let movie of movies">
+        {{movie.title}} - {{movie.director}} 
+    </li>
+ </ul> -->
+
+ <!-- **for table data -->
+ <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+        {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Title</th>
+                    <th>Directior</th>
+                    <th>Cact</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr [ngClass]="{'table-success': e, 'table-primary': o, 'table-dark':f}" *ngFor="let movie of movies; let i=index, let o=odd; let e=even; let f=first;">
+                    <td>{{i+1}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.casta}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+    </div>
+ </div> -->
+ <!-- ** ngSwitch -->
+<!-- <label for="">Type num</label>
+ <input type="text" name="" id="" [(ngModel)]="num">
+ <div [ngSwitch]="num">
+    <div *ngSwitchCase="1">one</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+
+
+ </div> -->
+
+ <!-- ** ngIf -->
+ <!-- <h1>ngIf examples</h1>
+ <p *ngIf="false">Can you see me ?</p> -->
+ <!-- here hide of view a content -->
+<!-- 
+ <div class="row">
+    <label for="checkbox">
+        <input type="checkbox" name="" id="" [(ngModel)]="showMe">
+    </label> -->
+
+ <!-- <p *ngIf="showMe">Showme is checked</p>
+ <p *ngIf="!showMe">Showme is unchecked</p> -->
+
+ <!-- OR we can use the else statment -->
+ <!-- <p *ngIf="showMe; else elseBlock">Showme is checked</p>
+
+ <ng-template #elseBlock>  -->
+    <!-- ## (#elseBlock is templet name) -->
+    <!-- <p >Showme is unchecked</p>
+ </ng-template>
+ </div> -->
+
+ <!-- ** using if else statement -->
+ <!-- <div *ngIf="showMe; then thenBlock; else elseBlock">
+
+
+ </div>
+
+ <ng-template #thenBlock> 
+    <p>Show me is checked</p>
+ </ng-template>
+
+ <ng-template #elseBlock>
+    <p>Show me is unchecked</p>
+ </ng-template> -->
+
+ <!-- *** Antribute Directives *** -->
+ <!-- <div [ngClass]="['secondary', 'big']">Sample Content</div> -->
+ <!-- <div [ngClass]="{'secondary':enable}">Sample Content</div>
+ <input type="checkbox" name="" id="" [(ngModel)]="enable" > -->
+ <!-- here decided a value of style yes or no -->
+
+ <!-- ## muliple valuse -->
+ <!-- Red<input type="checkbox" name="" id="" [(ngModel)]="enableRed">
+  Big<input type="checkbox" name="" id="" [(ngModel)]="enableBig">
+ <div
+ [ngClass]="{
+    'secondary':enableRed,
+    'big': enableBig
+
+ }"
+ >
+   sample text 
+ </div> -->
+
+ <!-- //** style directives -->
+ <!-- <div [ngStyle]="{'color':'green'}">sample text</div> -->
+ <!-- using condition -->
+ <!-- <div [ngStyle]="{'color':status=='error'?'green': 'blue'}">sample text</div> -->
+ <!-- here using in ternary operater -->
+ <!-- <input type="text" [(ngModel)]="color">
+ <div [ngStyle]="{
+    'color':color,
+ 
+    }">sample text</div> -->
+
+    <!--** Pipes  -->
+    <!-- //** date pipe -->
+    <!-- <p> Unformatted:{{toDate}}</p>
+    <p> formatted:{{toDate | date : 'short'}}</p>
+    <p> formatted:{{toDate | date : 'fullDate'}}</p>
+    <p> formatted:{{toDate | date : 'longDate'}}</p>
+    <p> formatted:{{toDate | date : 'medium'}}</p> -->
+    <!-- <p>Original : {{message}}</p>
+    <p>UpperCase : {{message | uppercase}}</p>
+    <p>LowerCase : {{message | lowercase}}</p>
+    <p>exapmple1 : {{message | slice:11:20}}</p>
+    <p>exaple2 : {{message | slice:-7}}</p> -->
+ <!-- //** currency pipe -->
+ <!-- <p>Price withOut Formating: {{price}} </p>
+ <p>Price with Formating: {{price |currency : 'INR'}} </p>
+ -->
+
+ 
