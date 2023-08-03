@@ -2,7 +2,9 @@
 <!-- <app-list ></app-list> -->
 Title : <input type="text" name="" id="" [(ngModel)]="title">
 <button (click)="addTitle()">Sumbit</button>
+ Disable:<input type="checkbox" name="" id="" [(ngModel)]="disableHeading">
 <br>
 <br>
 <h1>Heading Component</h1>
 <p [innerText]="titles"></p>
+<p [innerText]="titles" *ngIf="!disableHeading"></p>

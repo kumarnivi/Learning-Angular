@@ -1,11 +1,11 @@
-import { Component, Input,OnChanges, SimpleChanges, OnInit, DoCheck } from '@angular/core';
+import { Component, Input,OnChanges, SimpleChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.css']
 })
-export class HeadingComponent implements OnChanges, OnInit {
+export class HeadingComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
  @Input() innerText:string[] = [];
  noOfTitle=1
  ngOnChanges(changes: SimpleChanges): void {
@@ -30,5 +30,10 @@ export class HeadingComponent implements OnChanges, OnInit {
     this.noOfTitle++;
   }
  }
+
+ngOnDestroy(): void {
+  console.log('ngOnDestoyed is called');
+  
+}
 }
    
