@@ -74,6 +74,6 @@ title = 'List of Movies'
 //** pipes */
 // ##date Pipes
 // toDate = new Date();
-message = 'welcome To Angular';
-price = '125'
+// message = 'welcome To Angular';
+// price = '125'
 }

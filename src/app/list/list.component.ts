@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ListComponent {
   // @Input('carsInput')cars:string[]= [];
-  cars:string[] =[];
+  // cars:string[] =[];
 
-  carDataUpdated(carsData:string[]) {
-    this.cars = carsData;
-  }
+  // carDataUpdated(carsData:string[]) {
+  //   this.cars = carsData;
+  // }
 }
