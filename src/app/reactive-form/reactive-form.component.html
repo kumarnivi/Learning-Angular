@@ -1,0 +1,59 @@
+<h3>Reactive Form</h3>
+<form action="" [formGroup]="contactForm" (submit)="onSubmit()">
+    <p>
+        <label for="firstname">first Name</label>
+        <input type="text" name="firstname" id="firstname" formControlName="firstName">
+    </p>
+    <p>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname"formControlName="lastName">
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" formControlName="email">
+    </p>
+    <p>
+        <label for="firstName">Gender</label>
+        <input type="radio" value="male" name="gender" id="gender" formControlName="gender">Male
+        <input type="radio" value="female" name="gender" id="gender" formControlName="gender">Female
+
+    </p>
+    <p>
+        <label for="isMarried">married</label>
+        <input type="checkbox" name="isMarried" id="isMarried" formControlName="isMarried">
+    </p>
+    <p>
+        <label for="country">Country</label>
+        <select name="country" id="country" formControlName="country">
+            <option value="" selected="">Select</option>
+            <option value=""  >India </option>
+            <option value=""  >London </option>
+            <option value=""  >Canada </option>
+         
+        </select>
+    </p>
+      <div formGroupName="address">
+       <div class="form-group">
+        <p>
+            <label for="city">City</label>
+            <input type="text" name="city" id="" class="form-control" formControlName="city">
+          </p>
+       </div> 
+     <div class="form-group">
+        <p>
+            <label for="street">street</label>
+            <input type="text" name="street" id="" class="form-control" formControlName="street">
+          </p>
+     </div>
+     <div class="form-group">
+        <p>
+            <label for="pincode">City</label>
+            <input type="text" name="pincode" id="" class="form-control" formControlName="pinCode">
+          </p>
+     </div>
+      
+    </div>
+    <p>
+        <button type="submit">submit</button>
+    </p>
+</form>
