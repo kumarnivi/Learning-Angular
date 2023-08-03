@@ -1,9 +1,14 @@
-<!-- <div class="container">
+<div class="container">
     <h3>Tempalate Drivien</h3>
-    <form action="" #contactForm="ngForm" (submit)="onSubmit(contactForm)">
+    <form action="" #contactForm="ngForm" (submit)="onSubmit(firstName)" >
         <p>
             <label for="firstname">first Name</label>
-            <input type="text" name="firstname" id="firstname" [(ngModel)]="contact.firstName">
+            <input type="text" #firstName="ngModel" name="firstname" id="firstname" [(ngModel)]="contact.firstName" required>
+            <span  *ngIf="!firstName.valid && (firstName.touched || firstName.dirty)">
+                <span class="text-danger" *ngIf="firstName.errors?.['minlength']"> minmum length is 10 corecter</span>
+                <!-- <span *ngIf="firstName.errors?.['required']"> first Name is required</span> -->
+
+            </span>
         </p>
         <p>
             <label for="lastname">Last Name</label>
@@ -46,7 +51,7 @@
           </p>
         </div>
         <p>
-            <button type="submit">submit</button>
+            <button type="submit" >submit</button>
         </p>
     </form>
-</div> -->
+</div>
