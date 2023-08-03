@@ -6,7 +6,8 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
-import { HeadingComponent } from './heading/heading.component'
+import { HeadingComponent } from './heading/heading.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +15,7 @@ import { HeadingComponent } from './heading/heading.component'
     FormComponent,
     ListComponent,
     HeadingComponent,
+    TemplateDrivenFormComponent,
   
   ],
   imports: [ //here use for 2 way binding

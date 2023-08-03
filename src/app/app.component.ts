@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-world';
-  titles:string[] = [];
-  disableHeading= false;
-  addTitle() {
-    this.titles.push(this.title);
-    console.log(this.titles)
-  }
+  // titles:string[] = [];
+  // disableHeading= false;
+  // addTitle() {
+  //   this.titles.push(this.title);
+  //   console.log(this.titles)
+  // }
 }
