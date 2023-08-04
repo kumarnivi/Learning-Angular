@@ -18,7 +18,7 @@ export class TemplateDrivenFormComponent implements OnInit {
 
  ngOnInit(): void {
    this.contact = {
- firstName: "ddgdf",
+ firstName: " ",
  lastName:"kkf",
  email:"sdfvss@gmail.com",
  gender:"male",
@@ -29,8 +29,8 @@ export class TemplateDrivenFormComponent implements OnInit {
  }
    }
  }
-   onSubmit(formcontrol:NgControl) {
-    console.log(formcontrol)
+   onSubmit(form:NgForm) {
+    console.log(form.value)
    }
 }
 
