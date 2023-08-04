@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -7,22 +7,57 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent {
-//  contactForm = new FormGroup({
-//   firstName : new FormControl('rahul'),
-//   lastName : new FormControl(),
-//   email : new FormControl(),
-//   gender : new FormControl(),
-//   isMarried : new FormControl(),
-//   country : new FormControl(),
-//  address: new FormGroup({
-//   city: new FormControl(),
-//   street:new FormControl(),
-//   pinCode:new FormControl()
+ contactForm = new FormGroup({
+  firstName : new FormControl('',[Validators.required, Validators.minLength(10)]),
+  lastName : new FormControl('',[Validators.required, Validators.maxLength(15),Validators.pattern('^[a-zA-z]+$')]),
+  email : new FormControl('',[Validators.required]),
+  gender : new FormControl('',[Validators.required]),
+  isMarried : new FormControl('',[Validators.required]),
+  country : new FormControl('',[Validators.required]),
+  address: new FormGroup({
+  city: new FormControl('',[Validators.required]),
+  street:new FormControl('',[Validators.required]),
+  pinCode:new FormControl('',[Validators.required])
 
-//  })
+ })
 
-//  })
-//  onSubmit(){
-//   console.log(this.contactForm.value);
-//  }
+ })
+
+ 
+ get firstname() {
+  return this.contactForm.get('firstName')
+ }
+  
+ get lastname() {
+  return this.contactForm.get('lastname')
+ }
+  
+ get email() {
+  return this.contactForm.get('email')
+ }
+  
+ get gender() {
+  return this.contactForm.get('gender')
+ }
+  
+ get ismarrid() {
+  return this.contactForm.get('ismarrid')
+ }
+ get country() {
+  return this.contactForm.get('country')
+ }
+ get city() {
+  return this.contactForm.get('city')
+ }
+
+ get street() {
+  return this.contactForm.get('street')
+ }
+ get pincode() {
+  return this.contactForm.get('pincode')
+ }
+  
+ onSubmit(){
+  console.log(this.contactForm.value);
+ }
 }
