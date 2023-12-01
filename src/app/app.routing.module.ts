@@ -4,7 +4,7 @@ import { GridCardComponent } from './components/grid-card/grid-card.component';
 
 
 const routes: Routes = [
-{path:'grid',component:GridCardComponent}
+{path:'',component:GridCardComponent}
 
 
 ]
