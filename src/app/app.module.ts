@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +9,11 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { HeadingComponent } from './heading/heading.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { NavComponent } from './components/nav/nav.component';
+import { GridCardComponent } from './components/grid-card/grid-card.component'
+import { AppRoutingModule } from './app.routing.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +23,21 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
     HeadingComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    NavComponent,
+    GridCardComponent,
+    
   
   ],
   imports: [ //here use for 2 way binding
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    CarouselModule,
+    BrowserAnimationsModule
 
   ],
-  providers: [],
+  providers: [], //** here inject the services file  */
   bootstrap: [AppComponent]
 })
 export class AppModule { }

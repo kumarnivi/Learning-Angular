@@ -76,4 +76,9 @@ title = 'List of Movies'
 // toDate = new Date();
 // message = 'welcome To Angular';
 // price = '125'
+
+//** ngafterChecked */
+
 }
+
+

@@ -1,0 +1,233 @@
+<section class="navigation">
+    <div class="nav-container">
+      <nav>
+        <div class="brand">
+          <a routerLink="/">
+            <img
+              src="../../../assets/images/book-logo.png"
+              alt="logo"
+              width="40px"
+              height="auto"
+              class="img-fluid"
+            
+          /></a>
+        </div>
+        <div class="nav-mobile">
+          <a id="nav-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <ul class="nav-list" id="navlist">
+          <li
+            [routerLinkActive]="['active-home']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a routerLink="/" class="nav-link">Home</a>
+          </li>
+  
+          <li [routerLinkActive]="'active'">
+            <a routerLink="/ppa" class="nav-link">Book Stock</a>
+          </li>
+          <li [routerLinkActive]="'active'"   (click)="DropdownOpen()">
+            <a routerLink="/jppa" class="nav-link">Library</a>
+            <ul class="dropdown-menu" [ngClass]="{ show: isDropdownOpens }">
+                <div class="container">
+                  <div class="row notification-row">
+                    <li [routerLinkActive]="'active'">
+                        <a class="nav-link" routerLink="/suggestion">About Us</a>
+                      </li>
+                      <li [routerLinkActive]="'active'">
+                        <a class="nav-link" routerLink="/suggestion">About Us</a>
+                      </li>
+                      <li [routerLinkActive]="'active'">
+                        <a class="nav-link" routerLink="/suggestion">About Us</a>
+                      </li>
+                  </div>
+                </div>
+              </ul>
+
+
+          </li>
+          <li [routerLinkActive]="'active'">
+            <a class="nav-link" routerLink="/suggestion">About Us</a>
+          </li>
+          <li [routerLinkActive]="'active'">
+            <a class="nav-link" routerLink="/profile">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li style="margin-top: 19px">
+            <a class="nav-link">
+              <div class="dropdown" >
+             
+              
+              </div>
+            </a>
+          </li>
+          <li style="margin-top: 6px" routerLink="/login">
+            <a class="nav-link">
+              <button class="btn btn-login" >Login</button>
+              
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+
+
+  <!-- MOBILE MENU -->
+  
+
+  <nav id="menu" class="mobile-menu" [ngClass]="{ scrolled: true }">
+    <label for="tm" id="toggle-menu">
+      <a
+     
+        style="margin: 0; padding: 0; background-color: white; color: white"
+      >
+        <img
+          src="../../../assets/images/book-logo.png"
+          alt=""
+          height="70px"
+          width="70px"
+      /></a>
+      <span class="drop-icon">
+        <div class="">
+          <div
+            class="icon-bar"
+            [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"
+          ></div>
+          <div
+            class="icon-bar"
+            [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"
+          ></div>
+          <div
+            class="icon-bar"
+            [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"
+          ></div>
+        </div> </span
+    ></label>
+    <input type="checkbox" id="tm" />
+    <ul class="main-menu clearfix" style="background-color: white">
+      <li [routerLinkActive]="'active'">
+        <a routerLink="/home" class="nav-link">Home</a>
+      </li>
+      <li [routerLinkActive]="'active'">
+        <a (click)="scrollToTopAndNavigate('/ppa')" class="nav-link">Book Stock</a>
+      </li>
+  
+     
+      <li [routerLinkActive]="'active'">
+        <a (click)="scrollToTopAndNavigate('/suggestion')"> Library</a>
+      </li>
+      <li [routerLinkActive]="'active'">
+        <a (click)="scrollToTopAndNavigate('/profile')">About Us</a>
+      </li>
+
+      <!-- <li> -->
+        <!-- <a> -->
+          <!-- <button
+            class="btn alert alert position-relative"
+            type="button"
+            id="dropdownMenuButton1"
+          
+          >
+            <img src="../../../assets/logos/alert-icon.svg" alt="alert-icon" />
+            <span class="note position-absolute" *ngIf="!showBadge">
+            
+              <span class="visually-hidden">Contact us</span>
+            </span>
+          </button> -->
+          <!-- <label
+            title="Toggle Drop-down"
+            class="drop-icon1"
+            for="sm1"
+           
+            >▾
+          </label> -->
+        <!-- </a> -->
+        <!-- <input type="checkbox" id="sm1" /> -->
+        <!-- <ul class="sub-menu scrollable-container">
+          <div class="container">
+            <div class="row notification-row">
+              <div class="card">
+                <div class="new">
+                  NEW
+                  <div class="" (click)="closeDrodown()"></div>
+                </div>
+  
+                <div class="notifications-container">
+                  <div class="row">
+                    <div *ngFor="let notification of notification; let i = index">
+                      <div *ngIf="notification.userId != memberId">
+                        <div class="text-area mb-3">
+                          <div class="notification-card with-scroll">
+                            <div class="heading">
+                              {{ notification.noticeHeading }}
+                            </div>
+                            <div class="row">
+                              <div
+                                class="msg-area col-sm-7"
+                                placeholder=""
+                                readonly
+                              >
+                                <span style="width: 30px">
+                                  {{ notification.noticeContent }}
+                                </span>
+                              </div>
+                              <div class="btn-container col-sm-5">
+                                <button
+                                  class=""
+                                  (click)="updateNoticeById(notification)"
+                                >
+                                  View
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="new">OLD</div>
+                <div class="old-container">
+                  <div class="row">
+                    <div *ngFor="let notification of notification; let i = index">
+                      <div *ngIf="notification.userId == memberId">
+                        <div class="text-area mb-3">
+                          <div class="notification-card with-scroll">
+                            <div class="heading">
+                              {{ notification.noticeHeading }}
+                            </div>
+                            <div
+                              class="msg-area1"
+                              placeholder=""
+                              readonly
+                              rows="4"
+                            >
+                              {{ notification.noticeContent }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul> -->
+      <!-- </li> -->
+      <li>
+        <a (click)="scrollToTopAndNavigate('/login')">
+          <button class="btn btn-login" *ngIf="isLogOut">Login</button>
+          <!-- <button class="btn btn-login" *ngIf="isLogOut" (click)="onLogout()">
+            Logout
+          </button> -->
+        </a>
+      </li>
+    </ul>
+  </nav>

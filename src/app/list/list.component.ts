@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  // @Input('carsInput')cars:string[]= [];
-  // cars:string[] =[];
+  @Input('carsInput')cars:string[]= [];
+  // cars!:string[] =[];
 
-  // carDataUpdated(carsData:string[]) {
-  //   this.cars = carsData;
-  // }
+  carDataUpdated(carsData:string[]) {
+    this.cars = carsData;
+  }
 }
