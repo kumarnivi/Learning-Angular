@@ -79,7 +79,9 @@ header .navbar ul li:hover > ul{
     display: none;
 }
 
-
+.subNav li a{
+    color: #333 !important;
+}
 
 header label{
     font-size: 20px;
@@ -223,6 +225,9 @@ svg {
 .navbar{
     height: 100vh;
 }
+header .navbar ul li a{
+    color: #333 !important;
+}
 
     header{
         padding: 16px;
@@ -248,7 +253,10 @@ svg {
     }
     header .navbar ul li ul li {
         background: #eee;
+       
     }
+  
+
     header .navbar ul li ul li ul {
         width: 100%;
         left: 0;
