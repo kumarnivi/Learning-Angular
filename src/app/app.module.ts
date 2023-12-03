@@ -14,6 +14,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { GridCardComponent } from './components/grid-card/grid-card.component'
 import { AppRoutingModule } from './app.routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { MyComponentComponent } from './my-component/my-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ReactiveFormComponent,
     NavComponent,
     GridCardComponent,
-    
+    MenuBarComponent,
+    MyComponentComponent
   
   ],
   imports: [ //here use for 2 way binding
