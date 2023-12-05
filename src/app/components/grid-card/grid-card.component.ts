@@ -10,7 +10,9 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
  
 })
 export class GridCardComponent {
+ 
 
+  
   customOptions: OwlOptions = {
     items:1,
     loop: true,

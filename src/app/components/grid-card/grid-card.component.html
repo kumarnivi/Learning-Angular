@@ -2,13 +2,24 @@
 
 
 
+<!-- <div class="row img-row"> -->
+  <!-- <div class="row animate-row">
+    <h3 data-text="Books...">Books...</h3>
+  </div> -->
+ 
+  <!-- <div class="row ">
+    <span class="sub-heading">Beautiful Gift Books for Your Coffee Table</span>
+  </div> -->
+  <!-- <img class="banner" src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+<!-- </div> -->
+
+<app-banner></app-banner>
+
+
+
 <div class="container">
   <!-- row -->
-  <div class="row heading-row">
-    <h3>Book Store</h3>
-  </div>
-
-  <div class="crusel">
+   <!-- <div class="crusel">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide>
         <div class="img-div-carusel">
@@ -51,32 +62,32 @@
           alt=""
       /></ng-template>
     </owl-carousel-o>
-  </div>
+  </div>  -->
+
+  <section style="margin-top: 40px;">
+
+    <app-swiper></app-swiper>
+  </section>
 
   <div class="img-div"></div>
- 
- 
- 
+
   <div class="row grid-row-main">
+    <div class="row grid-heading">
+      <h5 data-text=" Collections">Collections</h5>
+    </div>
+
     <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let card of cardData">
       <div class="card box cyan">
         <div class="row">
           <h2>{{ card.title }}</h2>
           <p>{{ card.content }}</p>
-  
-          <img [src]="card.imageUrl" alt="">
+
+          <img [src]="card.imageUrl" alt="" />
         </div>
       </div>
     </div>
   </div>
-
-
-
-
 </div>
-
-
-
 
 
 
@@ -155,3 +166,4 @@
     </div>
   </div>
 </section> -->
+

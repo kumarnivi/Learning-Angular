@@ -1,5 +1,12 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
+
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
@@ -16,6 +23,10 @@ import { AppRoutingModule } from './app.routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MyComponentComponent } from './my-component/my-component.component';
+import { SliderComponentComponent } from './slider-component/slider-component.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { SwiperComponent } from './components/swiper/swiper.component';
+import { BannerComponent } from './components/banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +39,11 @@ import { MyComponentComponent } from './my-component/my-component.component';
     NavComponent,
     GridCardComponent,
     MenuBarComponent,
-    MyComponentComponent
-  
+    MyComponentComponent,
+    SliderComponentComponent,
+    LoaderComponent,
+    SwiperComponent,
+    BannerComponent
   ],
   imports: [ //here use for 2 way binding
     BrowserModule,
@@ -41,6 +55,7 @@ import { MyComponentComponent } from './my-component/my-component.component';
 
   ],
   providers: [], //** here inject the services file  */
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
