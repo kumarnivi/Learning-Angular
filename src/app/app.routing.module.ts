@@ -5,6 +5,7 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { HeadingComponent } from './heading/heading.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
 {path:'about',component:MyComponentComponent},
 {path:'loader', component:LoaderComponent},
 {path:'swiper', component:SwiperComponent},
-{path:'banner', component:BannerComponent}
+{path:'banner', component:BannerComponent},
+{path:'Heading', component:HeadingComponent}
 ]
 
 

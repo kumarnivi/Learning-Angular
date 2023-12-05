@@ -16,7 +16,7 @@ export class MenuBarComponent {
   onScroll(event: any): void {
     const navbar = this.el.nativeElement.querySelector('.top-nav'); 
     if (window.pageYOffset >= 50) {
-      this.renderer.setStyle(navbar, 'background', '#B99EA0');
+      this.renderer.setStyle(navbar, 'background', '#24262B');
       this.renderer.setStyle(navbar, 'color', 'black'); 
       this.renderer.setStyle(navbar, 'box-shadow', ' 0 0 50px 10px #adadad2d');
   

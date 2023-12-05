@@ -27,6 +27,8 @@ import { SliderComponentComponent } from './slider-component/slider-component.co
 import { LoaderComponent } from './components/loader/loader.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { MenuBar2Component } from './components/menu-bar2/menu-bar2.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import { BannerComponent } from './components/banner/banner.component';
     SliderComponentComponent,
     LoaderComponent,
     SwiperComponent,
-    BannerComponent
+    BannerComponent,
+    MenuBar2Component,
+    FooterComponent
   ],
   imports: [ //here use for 2 way binding
     BrowserModule,

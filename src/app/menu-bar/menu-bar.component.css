@@ -48,7 +48,7 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover{
-    background: #d66710;
+    background: #ebaf8142;
     color: #fff;
 }
 
@@ -124,7 +124,7 @@ svg {
   }
   .line {
     fill: none;
-    stroke: black;
+    stroke: #ffffffff;
     stroke-width: 6px;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -264,6 +264,7 @@ header .navbar ul li a{
     }
     #menu-bar:checked ~ .navbar{
         display: inline;
+        overflow-y: auto;
     }
 
 }

@@ -1,0 +1,140 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer{
+    background-color: #24262b;
+    position: relative;
+}
+
+.subfooter{
+   
+   margin-bottom: 0;
+    width: 100%;
+    background-color: #0a0a0ba9;
+    padding: 12px 10px 12px 60px;
+    
+}
+
+.subfooter span{
+    color: #bbbbbb;
+}
+
+
+.container{
+    max-width: 1170px;
+    /* background-color: blue; */
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+
+.media{
+    display: flex;
+    /* align-content: flex-start; */
+    justify-content: flex-start;
+   
+}
+
+.footer{
+    /* background-color: #24262b; */
+    padding: 70px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;  
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    columns: #ffffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:#bbbbbb ;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffffff;
+    padding-left: 8px;
+}
+
+.footer-col .media a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin:0 10px 0 10px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffffff;
+ transition: all 0.5s ease;
+}
+
+.footer-col .media a:hover{
+    color: #24262b;;
+    background-color: #ffffffff;
+}
+
+
+/* meada */
+
+
+@media (max-width:767px) {
+    .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    }
+
+    .footer-col h4::before{
+        display: none;
+    }
+
+    
+}
+
+
+@media (max-width:574px) {
+    .footer-col{
+    width: 100%;
+  
+    }
+    .footer{
+        text-align: center;
+    }
+    .media{
+        justify-content: center;
+    }
+
+    .subfooter{
+        padding: 12px;
+        text-align: center;
+    }
+}
