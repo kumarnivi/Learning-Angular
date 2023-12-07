@@ -1,0 +1,26 @@
+
+
+.container{
+  margin-top: 50px;
+}
+.card{
+    padding: 30px 20px ;
+    box-shadow:1px 0px 10px 5px #fefe;
+    border: none;
+  }
+
+
+.icon-row span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+h2{
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 65px;
+  color: brown;
+}

@@ -1,7 +1,13 @@
 import { style, transition, trigger ,animate} from '@angular/animations';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import anime from 'animejs/lib/anime.es.js';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { DOCUMENT } from '@angular/common';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-grid-card',
@@ -9,8 +15,73 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./grid-card.component.css'],
  
 })
-export class GridCardComponent {
+export class GridCardComponent implements OnInit ,AfterViewInit{
+  constructor(@Inject(DOCUMENT) private document: Document) {}
  
+  @ViewChild('imageFirst', { static: true }) imageFirst!: ElementRef<
+  HTMLDivElement
+>;
+
+
+initScrollAnimations(): void {
+  gsap.to(this.imageFirst.nativeElement, {
+    scrollTrigger: {
+      trigger: this.imageFirst.nativeElement,
+      scrub: true,
+
+      start: '50% center',
+    } as gsap.plugins.ScrollTriggerInstanceVars,
+    duration: 1.1,
+    scale: 1.5,
+    height: 250,
+
+
+    
+  });
+
+  
+}
+
+
+
+
+  ngOnInit() {
+    const animeBox = document.querySelector('.animeBox');
+    anime({
+      targets: animeBox,
+      left: '250px',
+      
+      translateX: 250,
+      backgroundColor: '#FFF',
+      borderRadius: ['0%', '50%'],
+      easing: 'easeInOutQuad',
+      loop:true
+    });
+
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".two",
+        start: "0% 195%",
+        end: "70% 150%",
+        scrub: true,
+        // markers: true,
+      }
+    });
+  
+    tl.to("#fanta",{
+      top: "198%",
+      left: "60%",
+     
+  })
+  }
+
+
+
+  ngAfterViewInit() {
+   
+  }
+
 
   
   customOptions: OwlOptions = {
@@ -91,4 +162,9 @@ cardData = [
   
   // Add more card data as needed
 ];
+
+
+
+
+
 }

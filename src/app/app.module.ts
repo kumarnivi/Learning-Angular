@@ -29,6 +29,9 @@ import { SwiperComponent } from './components/swiper/swiper.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MenuBar2Component } from './components/menu-bar2/menu-bar2.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { DeliveryCardComponent } from './pages/delivery-card/delivery-card.component';
+import { FeaturedBooksComponent } from './components/featured-books/featured-books.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +50,10 @@ import { FooterComponent } from './components/footer/footer.component';
     SwiperComponent,
     BannerComponent,
     MenuBar2Component,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    DeliveryCardComponent,
+    FeaturedBooksComponent
   ],
   imports: [ //here use for 2 way binding
     BrowserModule,

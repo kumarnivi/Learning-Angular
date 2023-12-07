@@ -1,3 +1,6 @@
+
+
+
 .swiper-slide{
   background-position: center;
   background-size: cover;
@@ -7,6 +10,7 @@
   justify-content: center;
   width: 300px;
   height: 400px;
+  -webkit-box-reflect: below 1px liner-gradient(transparent,transparent, #0006);
 }
 
 .clients .swiper-slide img {

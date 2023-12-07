@@ -10,7 +10,7 @@ header{
     position: fixed;
     top: 0; left: 0; right: 0;
     /* background: linear-gradient(186deg, #FD9E3E, #E43845); */
-    background: #24262B;
+    /* background: transparent; */
     /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     padding: 0px 7%;
      display: flex;

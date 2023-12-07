@@ -1,7 +1,5 @@
 <app-menu-bar></app-menu-bar>
 
-
-
 <!-- <div class="row img-row"> -->
   <!-- <div class="row animate-row">
     <h3 data-text="Books...">Books...</h3>
@@ -18,6 +16,13 @@
 
 
 <div class="container">
+
+  <div class="one">
+    
+    <img id="fanta" src="./../../../assets/pngwing.com.png" alt="">
+   
+</div>
+
   <!-- row -->
    <!-- <div class="crusel">
     <owl-carousel-o [options]="customOptions">
@@ -64,16 +69,30 @@
     </owl-carousel-o>
   </div>  -->
 
-  <section style="margin-top: 40px;">
 
+<!-- swiper -->
+  <section style="margin-top: 40px;">
     <app-swiper></app-swiper>
   </section>
 
-  <div class="img-div"></div>
 
-  <div class="row grid-row-main">
+  
+<app-delivery-card></app-delivery-card>
+
+  <!-- about page -->
+  <section>
+    <app-my-component></app-my-component>
+  </section>
+
+
+  <!-- <app-featured-books></app-featured-books> -->
+
+<!-- grid component -->
+  <div class="img-div"></div>
+  <div #animeBox id="animeBox "></div>
+  <div class="row grid-row-main two">
     <div class="row grid-heading">
-      <h5 data-text=" Collections">Collections</h5>
+      <h5 data-text=" Collections">New Arrivals</h5>
     </div>
 
     <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let card of cardData">
@@ -88,7 +107,6 @@
     </div>
   </div>
 </div>
-
 
 
 <!-- <section>
