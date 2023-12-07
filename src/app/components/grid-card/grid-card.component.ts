@@ -70,10 +70,10 @@ initScrollAnimations(): void {
     });
   
     tl.to("#fanta",{
-      top: "198%",
-      left: "60%",
-     
+      top: "188%",
+      left: "60%",    
   })
+
   }
 
 
