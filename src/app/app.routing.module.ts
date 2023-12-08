@@ -20,6 +20,7 @@ const routes: Routes = [
 {path:'banner', component:BannerComponent},
 {path:'Heading', component:HeadingComponent},
 {path:'deliverd', component:DeliveryCardComponent}
+
 ]
 
 

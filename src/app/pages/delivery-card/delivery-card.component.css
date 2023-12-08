@@ -24,3 +24,21 @@ h2{
   line-height: 65px;
   color: brown;
 }
+
+
+@media (max-width:991px) {
+  .card{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width:767px) {
+
+  .delivery-row{
+    display: flex;
+    justify-content: center;
+  }
+  .card{
+    margin-bottom: 20px;
+  }
+}

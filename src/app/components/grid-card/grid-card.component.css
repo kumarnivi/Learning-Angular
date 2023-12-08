@@ -21,12 +21,19 @@
   background:#4d231c ;
 } */
 
+
+.main-column{
+  margin-bottom: 50px;
+}
+
 #fanta{
   position: absolute;
   width: 40%;
   z-index: 2;
   transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
 }
+
+
 
 .img-div {
   margin-bottom: 50px;
@@ -271,5 +278,12 @@ header {
     h1 {
       font-size: 24px;
     }
+  }
+}
+
+
+@media (max-width:767px) {
+  #fanta{
+    display: none;
   }
 }

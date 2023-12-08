@@ -33,6 +33,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { DeliveryCardComponent } from './pages/delivery-card/delivery-card.component';
 import { FeaturedBooksComponent } from './components/featured-books/featured-books.component';
+import { CustomerSaysComponent } from './components/customer-says/customer-says.component';
+import { AboutbookComponent } from './components/aboutbook/aboutbook.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,10 @@ import { FeaturedBooksComponent } from './components/featured-books/featured-boo
     FooterComponent,
     AboutComponent,
     DeliveryCardComponent,
-    FeaturedBooksComponent
+    FeaturedBooksComponent,
+    CustomerSaysComponent,
+    AboutbookComponent
+    
   ],
   imports: [ //here use for 2 way binding
     BrowserModule,
@@ -63,9 +69,10 @@ import { FeaturedBooksComponent } from './components/featured-books/featured-boo
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    
   ],
+
   providers: [], //** here inject the services file  */
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
