@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
@@ -61,7 +62,8 @@ import { FeaturedBooksComponent } from './components/featured-books/featured-boo
     ReactiveFormsModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
 
   ],
   providers: [], //** here inject the services file  */

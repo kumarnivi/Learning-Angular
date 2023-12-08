@@ -46,16 +46,17 @@ initScrollAnimations(): void {
 
 
   ngOnInit() {
+    
     const animeBox = document.querySelector('.animeBox');
     anime({
       targets: animeBox,
       left: '250px',
-      
       translateX: 250,
       backgroundColor: '#FFF',
       borderRadius: ['0%', '50%'],
       easing: 'easeInOutQuad',
       loop:true
+   
     });
 
 
@@ -75,7 +76,6 @@ initScrollAnimations(): void {
   })
 
   }
-
 
 
   ngAfterViewInit() {
